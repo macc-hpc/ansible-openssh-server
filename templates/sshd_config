@@ -1,0 +1,27 @@
+# {{ ansible_managed }}
+
+{% for key in openssh_hostkeys %}
+HostKey {{ key }}
+{% endfor %}
+
+{% if openssh_kexalgorithms %}
+KexAlgorithms {{ openssh_kexalgorithms | join(',') }}
+{% endif %}
+
+{% if openssh_ciphers %}
+Ciphers {{ openssh_ciphers | join(',') }}
+{% endif %}
+
+{% if openssh_macs %}
+MACs {{ openssh_macs | join(',') }}
+{% endif %}
+
+
+{% if openssh_acceptenv %}
+AcceptEnv {{ openssh_acceptenv | join(' ') }}
+{% endif %}
+
+{% for key, value in openssh_config.items() %}
+{{ key }} {{ value }}
+{% endfor %}
+

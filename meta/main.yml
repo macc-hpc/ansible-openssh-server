@@ -1,0 +1,17 @@
+---
+
+galaxy_info:
+  author: ruimiguel
+  description: OpenSSH Installation
+  company: MACC
+  license: MIT
+  min_ansible_version: 2.4
+  platforms:
+    - name: CentOS
+      versions:
+        - all
+  galaxy_tags:
+    - authentication
+    - openssh
+    - ssh
+dependencies: []

@@ -1,0 +1,7 @@
+---
+
+- name: restart openssh
+  service:
+    name: sshd
+    state: restarted
+  tags: openssh
