@@ -48,7 +48,6 @@ openssh_acceptenv:
 openssh_config:
   AddressFamily: inet
   ListenAddress: 0.0.0.0
-  RekeyLimit: 1G
   SyslogFacility: AUTHPRIV
   LogLevel: VERBOSE
   LoginGraceTime: 1m
@@ -63,10 +62,7 @@ openssh_config:
   KerberosAuthentication: 'no'
   GSSAPIAuthentication: 'no'
   UsePAM: 'yes'
-  TCPKeepAlive: 'no'
   PermitUserEnvironment: 'no'
-  ClientAliveInterval: 15
-  ClientAliveCountMax: 3
   ShowPatchLevel: 'no'
   UseDNS: 'yes'
   Subsystem: 'sftp    /usr/libexec/openssh/sftp-server -f AUTHPRIV -l INFO'
